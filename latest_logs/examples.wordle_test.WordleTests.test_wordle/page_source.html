@@ -1,0 +1,267 @@
+<base href="https://www.nytimes.com">
+<html lang="en" class="pz-dont-touch"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#000000"><title data-testid="page-title">Wordle - The New York Times</title><link rel="manifest" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-web-manifest.json?v=v2405101105"><link rel="apple-touch-icon" sizes="180x180" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-apple-touch-icon.png?v=v2405101105"><link rel="mask-icon" color="#FFFFFF" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-safari-pinned-tab.svg?v=v2405101105"><link rel="shortcut icon" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-favicon.ico?v=v2405101105"><link href="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_logo_32x32.png" rel="icon shortcut" sizes="3232"><link href="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_logo_192x192.png" rel="apple-touch-icon"><meta name="apple-mobile-web-app-title" content="Wordle"><meta name="application-name" content="Wordle"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="theme-color" content="#FFFFFF"><meta name="sourceApp" content="games-crosswords"><meta property="description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:title" content="Wordle - A daily word game"><meta property="og:url" content="https://www.nytimes.com/games/wordle"><meta property="og:description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:image" content="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_og_1200x630.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="nytimes.com"><meta property="theme-color" content="#6aaa64"><link rel="canonical" href="https://www.nytimes.com/games/wordle/index.html"><link rel="stylesheet" type="text/css" href="https://www.nytimes.com/games-assets/v2/9408.8f132bbee951bf058513.css"><link rel="stylesheet" type="text/css" href="https://www.nytimes.com/games-assets/v2/wordle.999dadaf4342d23a39f9.css"><style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style><script type="text/javascript" async="" src="https://collector.brandmetrics.com/c.js?siteid=4486dfe2-780e-4dfa-a60a-2a948887658f&amp;toploc=www.nytimes.com&amp;rnd=5246654"></script><script type="text/javascript" async="" id="iterate-script" src="https://platform.iteratehq.com/match-prod-84dd1075f9aacd71f561.js"></script><script async="" src="https://static.chartbeat.com/js/chartbeat_video.js"></script><script id="iterate-js" async="" src="https://platform.iteratehq.com/loader.js"></script><script src="https://pagead2.googlesyndication.com/tag/js/gpt.js" async=""></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://pagead2.googlesyndication.com/pagead/managed/js/gpt/m202405070101/pubads_impl.js" async=""></script><script type="text/javascript" src="https://a1.nyt.com/analytics/show-ads.js"></script></head><body class="pz-desktop pz-web pz-purr-adconfiguration-ltd pz-purr-californianotices-hide pz-purr-datasaleoptout-hide pz-purr-limitsensitivepi-hide pz-purr-fidestcf-show pz-anon"><script type="text/javascript" id="">(function(){var d=window.nytAnalytics=window.nytAnalytics||{},h=function(a){return 10>a?"0"+a:a},n="Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(" "),p="January February March April May June July August September October November December".split(" ");d.formattedDates=d.formattedDates||{};d.formatDates=function(a,b){var c=this.formattedDates;if(!a||!b)return"";if("undefined"===typeof c[a]){var e=new Date(a);if("Invalid Date"==e)return"";var k=e,l=k.setTime;var f=e;var m=-5;if(10>
+f.getUTCMonth()&&2<f.getUTCMonth())m=-4;else if(2===f.getUTCMonth()){var g=new Date(f.getUTCFullYear(),2,8,-5);g=0===g.getUTCDay()?8:15-g.getUTCDay();if(f.getUTCDate()>g||f.getUTCDate()===g&&6<f.getUTCHours())m=-4}else 10===f.getUTCMonth()&&(f.getUTCFullYear(),g=0===g.getUTCDay()?1:8-g.getUTCDay(),f.getUTCDate()<g||f.getUTCDate()===g&&7>f.getUTCHours())&&(m=-4);f=m;l.call(k,a+36E5*f);c[a]={year:e.getUTCFullYear(),date:[e.getUTCFullYear(),h(e.getUTCMonth()+1),h(e.getUTCDate()),h(e.getUTCHours())].join("-"),
+dateAlone:[e.getUTCFullYear(),h(e.getUTCMonth()+1),h(e.getUTCDate())].join("-"),day:n[e.getUTCDay()],hours:h(e.getUTCHours()),month:p[e.getUTCMonth()]}}return c[a][b]};d.resetPage=function(){this.currQuartile=this.maxQuartile=0;this.scrollComplete=this.scrollStart=!1;this.activeTime=0;this.maxViewport={}};d.resetPage();d.hitQuartile=function(a){var b=this.getData("viewport.documentHeight")||document.getElementById("app").clientHeight;b/=4;this.currQuartile=25*Math.floor(a/b);return this.currQuartile>
+this.maxQuartile?(this.maxQuartile=this.currQuartile,!0):!1};d.getMaxViewport=function(a){var b=this.maxViewport;if(!b.scrollTop||!b.height||!b.width||(a.scrollTop+a.height)*a.width>(b.scrollTop+b.height)*b.width)this.maxViewport=JSON.parse(JSON.stringify(a));return this.maxViewport};d.pagemeta=function(){var a,b={},c=document.getElementsByTagName("meta");for(a=c.length-1;0<=a;a--)b[c[a].name]=c[a].content;return b}();d.heartbeat=function(a){this.activeTime=this.activeTime||0;this.activeTime+=a.heartbeatInterval;
+(a=a.heartbeatInterval&&(3E4>=this.activeTime||12E4>=this.activeTime&&0===this.activeTime%(2*a.heartbeatInterval)||3E5>=this.activeTime&&0===this.activeTime%(4*a.heartbeatInterval)||3E5<this.activeTime&&18E5>=this.activeTime&&0===this.activeTime%(6*a.heartbeatInterval)))&&"function"==typeof nyt_et&&nyt_et("send",{subject:"page_update",activeTime:this.activeTime,gtm:google_tag_manager["rm"]["2703797"](14)})};d.interaction=function(a){if("function"===typeof nyt_et){var b={subject:"interaction",gtm:google_tag_manager["rm"]["2703797"](15)};
+a.eventData&&(b.eventData=a.eventData);a.module&&(b.module=a.module,"object"===typeof b.module.element&&"undefined"!==typeof b.module.element.label&&(b.module.element.label=b.module.element.label.toString()));a.card&&(b.card=JSON.parse(JSON.stringify(a.card)),"string"===typeof b.card.index&&(/^\d+$/.test(b.card.index)?b.card.index=parseInt(b.card.index,10):/\w+/.test(b.card.index)&&(b.card.index=null)));a.block&&(b.block=a.block);a.newsletter&&(b.newsletter=a.newsletter);a.ad&&(b.ad=a.ad);a["package"]&&
+(b["package"]=a["package"]);a.item&&(b.item=a.item);a.impression_id&&(b.impression_id=a.impression_id);nyt_et("send",JSON.parse(JSON.stringify(b)))}};d.performance=function(a){"function"==typeof nyt_et&&(a={subject:"page_update",performance:a.performance,gtm:google_tag_manager["rm"]["2703797"](16)},d.exitPriority?(a.eventData={type:"ob_click"},nyt_et("send",a)):nyt_et(a))};d.impression=function(a,b){var c={event:"impression"},e=!1;a.module&&(c.module=JSON.parse(JSON.stringify(a.module)),e=!0);a.card&&(c.card=JSON.parse(JSON.stringify(a.card)),
+"string"===typeof c.card.index&&(/^\d+$/.test(c.card.index)?c.card.index=parseInt(c.card.index,10):/\w+/.test(c.card.index)&&(c.card.index=null)),e=!0);a.block&&(c.block=JSON.parse(JSON.stringify(a.block)),e=!0);a.eventData&&(c.eventData=JSON.parse(JSON.stringify(a.eventData)),e=!0);a.ad&&(c.ad=JSON.parse(JSON.stringify(a.ad)),e=!0);a.newsletter&&(c.newsletter=JSON.parse(JSON.stringify(a.newsletter)),e=!0);a.container&&(c.container=JSON.parse(JSON.stringify(a.container)),e=!0);a["package"]&&(c["package"]=
+JSON.parse(JSON.stringify(a["package"])),e=!0);a.item&&(c.item=JSON.parse(JSON.stringify(a.item)),e=!0);a.integration&&(c.integration=JSON.parse(JSON.stringify(a.integration)),e=!0);a.addon&&(c.addon=JSON.parse(JSON.stringify(a.addon)),e=!0);b&&(c.priority=!0);"function"==typeof nyt_et&&e&&(c.subject="impression",c.gtm=google_tag_manager["rm"]["2703797"](17),b?nyt_et("soon",c):nyt_et(c));dataLayer.push({module:void 0,card:void 0,block:void 0,eventData:void 0,ad:void 0,pageview:{ad:void 0},newsletter:void 0,container:void 0,
+"package":void 0,item:void 0,integration:void 0,addon:void 0})};d.scrolling=function(a){a=a.viewport;var b=a.scrollTop+a.height,c=!1;a.activeTime=this.activeTime;d.scrollStart||(c=d.scrollStart=!0,dataLayer.push({event:"gaScrollEvent",eventData:{gaAction:"scroll_start"}}));d.hitQuartile(b)&&100===d.maxQuartile&&dataLayer.push({event:"gaScrollEvent",eventData:{gaAction:"page_complete"}});"function"==typeof nyt_et&&(nyt_et({subject:"page_update",viewport:a,gtm:google_tag_manager["rm"]["2703797"](18)}),c&&nyt_et("send",
+{subject:"interaction",gtm:google_tag_manager["rm"]["2703797"](19),eventData:{trigger:"module",type:"scroll"},module:{name:"scroll",element:{name:"first-scroll"}}}))};d.slideshow=function(a){var b={};a.slideshow&&("function"==typeof nyt_et&&(b.slideshowObj=JSON.parse(JSON.stringify(a.slideshow)),b.subject="page_update",b.gtm=google_tag_manager["rm"]["2703797"](20),nyt_et("send",b)),dataLayer.push({slideshow:null}))};d.getData=function(a){return(a=google_tag_manager[google_tag_manager["rm"]["2703797"](21)].dataLayer.get(a))?"object"!==typeof a?a:JSON.parse(JSON.stringify(a)):
+""};d.gaEvent={};d.gaEvent["see more"]={category:function(){return d.getData("presentation.pageType")+" - "+d.getData("interaction.type")},action:function(){return d.getData("interaction.module.context")+" - "+d.getData("interaction.module.name")},label:function(){return d.getData("interaction.module.slug")},value:function(){return""}};d.gaEvent["games-prototype-spelling-bee"]={value:function(){return d.getData("interaction.module.progress.timeInGame")},label:function(){return d.getData("interaction.module.progress.guess")}};
+d.subscription=function(a){if("function"===typeof nyt_et){var b={subject:"subscription_event",gtm:google_tag_manager["rm"]["2703797"](22)},c=function(e,k,l,f){e&&k&&("undefined"!==typeof l||"undefined"!==typeof f)&&(e[k]="undefined"!==typeof l?l:f)};c(b,"assetUrl",google_tag_manager["rm"]["2703797"](23));c(b,"bundleType",a.bundle_type);c(b,"date",a.purchase_date);c(b,"eventName",a.event_name);c(b,"oc",a.offer_chain_id);c(b,"price",a.price);c(b,"referrer",google_tag_manager["rm"]["2703797"](24));c(b,"subscriptionId",a.subscription_id);c(b,"url",google_tag_manager["rm"]["2703797"](25));
+c(b,"conversionType",a.conversion_type);c(b,"orderQuantity",a.order_quantity);c(b,"isHomeDelivery",a.is_home_delivery);c(b,"isDigiSub",a.is_digi_sub);c(b,"isSpotify",a.is_spotify);c(b,"isEdu",a.is_edu);c(b,"isDonation",a.is_donation);c(b,"hashedUserEmail",a.hashedUserEmail);c(b,"offer_id",a.offer_id);c(b,"source",a.source);c(b,"transaction_app",a.transaction_app);c(b,"campaign_id",a.campaign_id);c(b,"prior_bundles",a.prior_bundles);c(b,"payment_method",a.payment_method);nyt_et("send",b)}};d.reportTagFired=
+function(a){if(!(1<100*Math.random()||"function"!==typeof nyt_et)){var b=google_tag_manager["rm"]["2703797"](26),c=google_tag_manager["rm"]["2703797"](27);nyt_et("soon",{subject:"gtm-tag-fired",tag:a,container:{id:b,version:c},url:google_tag_manager["rm"]["2703797"](28)})}}})();</script><script type="text/javascript" id="">!function(d){function x(){var f,a;if(a=d.crypto||d.msCrypto)a=a.getRandomValues(new Uint8Array(18));else for(a=[];18>a.length;)a.push(256*Math.random()^255&(f=f||+new Date)),f=Math.floor(f/256);return btoa(String.fromCharCode.apply(String,a)).replace(/\+/g,"-").replace(/\//g,"_")}var r,t,p,B,l,q,u=[],m={pv_id:"",ctx_id:"",intra:!1,force_xhr:!1,store_last_response:!1},C="object"==typeof d.navigator&&"string"==typeof d.navigator.userAgent&&/iP(ad|hone|od)/.test(d.navigator.userAgent),y="object"==typeof d.navigator&&
+d.navigator.sendBeacon,D=y?C?"xhr_ios":"beacon":"xhr";if(d.nyt_et)try{console.warn("et2 snippet should only load once per page")}catch(f){}else d.nyt_et=function(){function f(v){var b,g,k,n,e;u.length&&(b=r+"track",g=JSON.stringify(u),k=m.force_xhr,n=m.store_last_response,!k&&("beacon"===D||y&&v)?(k=d.navigator.sendBeacon(b,g),n&&(q=k)):((e="undefined"!=typeof XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP")).open("POST",b),e.withCredentials=!0,e.setRequestHeader("Accept",
+"*/*"),"string"==typeof g?e.setRequestHeader("Content-Type","text/plain;charset\x3dUTF-8"):"[object Blob]"==={}.toString.call(g)&&g.type&&e.setRequestHeader("Content-Type",g.type),n&&!e.onload&&(e.onload=function(){q=e.response},e.onerror=function(z){q=!1}),e.send(g)),u.length=0,clearTimeout(l),l=null)}var a,A,w,c=arguments;if("string"==typeof c[0]&&/init/.test(c[0])&&(m=function(v,b){var g="",k="",n=!1,e=!1,z=!1;if("string"==typeof v&&"init"==v&&"object"==typeof b&&("boolean"==typeof b.intranet&&
+b.intranet&&(n=!0),"boolean"==typeof b.force_xhr&&b.force_xhr&&(e=!0),"boolean"==typeof b.store_last_response&&b.store_last_response&&(z=!0),"string"==typeof b.pv_id_override&&"string"==typeof b.ctx_id_override))if(24<=b.pv_id_override.length&&24<=b.ctx_id_override.length)g=b.pv_id_override,k=b.ctx_id_override;else try{console.warn("override id(s) must be \x3e\x3d 24 chars long")}catch(E){}return{pv_id:g,ctx_id:k,intra:n,store_last_response:z,force_xhr:e}}(c[0],c[3]),p=m.pv_id||x(),"init"==c[0]&&
+!t)){if(t=m.ctx_id||x(),"string"!=typeof c[1]||!/^http/.test(c[1]))throw Error("init must include an et host url");if(r=String(c[1]).replace(/([^\/])$/,"$1/"),"string"!=typeof c[2])throw Error("init must include a source app name");B=c[2]}var h=c.length-1;(a=c[h]&&"object"==typeof c[h]?c[h]:a)||/init/.test(c[0])?a&&!a.subject&&console.warn("event data {} must include a subject"):console.warn("when invoked without 'init' or 'pageinit', nyt_et() must include a event data");r&&a&&a.subject&&(h=a.subject,
+delete a.subject,w="page_exit"==h||"ob_click"==(a.eventData||{}).type,A="page"==h||"page_soft"==h?p:x(),u.push({context_id:t,pageview_id:p,event_id:A,client_lib:"v1.3.0",sourceApp:B,intranet:m.intra?1:void 0,subject:h,how:w&&C&&y?"beacon_ios":D,client_ts:+new Date,data:JSON.parse(JSON.stringify(a))}),"send"==c[0]||A==p||w?f(w):("soon"==c[0]&&(clearTimeout(l),l=setTimeout(f,200)),l=l||setTimeout(f,5500)))},d.nyt_et.get_pageview_id=function(){return p},d.nyt_et.get_context_id=function(){return t},d.nyt_et.get_host=
+function(){return r},d.nyt_et.get_last_send_response=function(){var f=q;return f&&(q=null),f}}(window);</script>
+<script type="text/javascript" id="">nyt_et.get_pageview_id()||nyt_et("init",google_tag_manager["rm"]["2703797"](29),google_tag_manager["rm"]["2703797"](31),{subject:"page",canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,articleId:(document.querySelector("meta[name\x3darticleid]")||{}).content,pubpEventId:(document.querySelector("meta[name\x3dpubp_event_id]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),gtm:google_tag_manager["rm"]["2703797"](36),
+is_iframe:window.top!=window});nytAnalytics=window.nytAnalytics||{};nytAnalytics.et2_pageview_id=nyt_et.get_pageview_id();</script><script type="text/javascript" id="">(function(){if(window.nyt_et){var a={};3<parseInt(navigator.appVersion,10)&&("Microsoft Internet Explorer"===navigator.appName&&document.body?a.size=document.body.offsetWidth+"x"+document.body.offsetHeight:"Netscape"===navigator.appName&&(a.size=window.innerWidth+"x"+window.innerHeight));var b=new Date;a.timeZone=b.getTimezoneOffset()/60*-1;a.timeZoneHour=b.getHours();window.matchMedia&&(!0===window.matchMedia("(orientation: portrait)").matches?a.orientation="port":!0===window.matchMedia("(orientation: landscape)").matches&&
+(a.orientation="land"));a.language="Netscape"===navigator.appName?navigator.language:navigator.userLanguage;b="undefined"!==typeof window.ethereum||"undefined"!==typeof window.web3;nyt_et({subject:"page_update",browser:a,cryptowallet:b,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,articleId:(document.querySelector("meta[name\x3darticleid]")||
+{}).content,pubpEventId:(document.querySelector("meta[name\x3dpubp_event_id]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,referrer:"",gtm:google_tag_manager["rm"]["2703797"](45),is_iframe:window.top!=window})}})();</script><script type="text/javascript" id="">window.iterateSettings={apiKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55X2lkIjoiNWMwOThiM2QxNjU0YzEwMDAxMmM2OGY5IiwiaWF0IjoxNTQ0MTI5MzQxfQ.UI13nEXGs0udbZxhjyFLruAEed42XwFO4fZlCqOgY1o"};
+(function(a,d,f,g,h){function e(){b=d.createElement(f);b.id=g;b.async=1;b.src="https://platform.iteratehq.com/loader.js";k.parentNode.insertBefore(b,k)}if(!d.getElementById(g)){a.IterateObjectName=h;var c=function(){c.c(arguments)};c.q=[];c.c=function(l){c.q.push(l)};a[h]=c;var b,k=d.getElementsByTagName(f)[0];"complete"===d.readyState?e():a.attachEvent?a.attachEvent("onload",e):a.addEventListener("load",e,!1)}})(window,document,"script","iterate-js","Iterate");</script>
+<script type="text/javascript" id="">try{if(window.Iterate&&"function"===typeof Iterate){var subscriberInfo="",uType="undefined",eduSubscriber="object"===typeof subscriberInfo?subscriberInfo.eduSubscriber:"",userType="string"===typeof uType?uType:"",surveyTriggerCookie="false",params={eduSubscriber:eduSubscriber,userType:userType};surveyTriggerCookie?(params.external_id="undefined",params.agentId="lzvuWnoTdoDBsZN-WSPDkb",Iterate("identify",params),Iterate("install",surveyTriggerCookie)):
+Iterate("identify",params)}}catch(a){console.log(a)};</script><script type="text/javascript" id="">window.parent===window&&function(){function d(){var a;return a=(a=unescape(document.cookie).match("NYT-Edition\x3d([^;]+)"))&&a[1]&&-1!==a[1].indexOf("edition|GLOBAL")?"international.nytimes.com":/^\/(games|crosswords|puzzles)/.test(document.location.pathname)?"games.nytimes.com":"nytimes.com"}function b(){var a;regex=/(^.*)(nytimes.com.*)/;return a=google_tag_manager["rm"]["2703797"](128)&&google_tag_manager["rm"]["2703797"](129).match(regex)[2]}function c(){var a=[];"Homepage"===google_tag_manager["rm"]["2703797"](130)?a.push("Homepage"):(google_tag_manager["rm"]["2703797"](131)&&
+a.push(google_tag_manager["rm"]["2703797"](132)),google_tag_manager["rm"]["2703797"](133)&&a.push(google_tag_manager["rm"]["2703797"](134)),google_tag_manager["rm"]["2703797"](135)&&a.push(google_tag_manager["rm"]["2703797"](136)),/parenting\./.test(document.location.host)&&a.push("parenting"),0===a.length&&/\/202\d\/\d\d\/\d\d\/us\/elections\/results/.test(document.location.href)&&(a.push("us"),a.push("Elections")));return a.join(",")}if("object"==typeof window._sf_async_config&&"object"==typeof pSUPERFLY&&"function"==typeof pSUPERFLY.virtualPage)pSUPERFLY.virtualPage({sections:c(),path:b(),
+title:google_tag_manager["rm"]["2703797"](137)||document.title});else{window._sf_async_config={uid:16698,domain:d(),pingServer:"pnytimes.chartbeat.net",useCanonical:!0,path:b(),title:google_tag_manager["rm"]["2703797"](138)||document.title};_cbq=window._cbq=window._cbq||[];switch(google_tag_manager["rm"]["2703797"](139)){case "sub":_cbq.push(["_acct","paid"]);break;case "anon":_cbq.push(["_acct","anon"]);break;case "regi":_cbq.push(["_acct","lgdin"])}try{window._sf_async_config.sections=c()}catch(a){}try{window._sf_async_config.authors=Array.isArray(google_tag_manager["rm"]["2703797"](140))&&
+google_tag_manager["rm"]["2703797"](141).join(",")}catch(a){}window._sf_endpt=(new Date).getTime();firstScript=document.getElementsByTagName("script")[0];cbScript=document.createElement("script");cbScript.async=!0;cbScript.src="https://static.chartbeat.com/js/chartbeat_video.js";firstScript.parentNode.insertBefore(cbScript,firstScript)}}();</script><script type="text/javascript" id="">(function(){function c(d,a){var b=document.createElement("script");b.type="text/javascript";a&&(b.onload=a,b.onerror=a);a=document.getElementsByTagName("head")[0];a.appendChild(b);b.src=d}c("https://a1.nyt.com/analytics/show-ads.js",function(){window.nyt_et&&nyt_et({subject:"page_update",adBlockEnabled:!1!==window.adBlockDetected})})})();</script>  <script type="text/javascript" id="">(function(b){function f(){if("MozAppearance"in document.documentElement.style){var a=indexedDB.open("test");a.onerror=c;a.onsuccess=d;return!0}}function e(a){b.nyt_et&&nyt_et({subject:"page_update",isIncognito:a})}var c,d;b.nyt_et&&function(a,g){c=a||function(){};d=g||function(){};b.webkitRequestFileSystem?(b.webkitRequestFileSystem(b.TEMPORARY,1,d,c),a=!0):a=void 0;if(!(a=a||f()))a:if(0<Object.prototype.toString.call(b.HTMLElement).indexOf("Constructor")||"[object SafariRemoteNotification]"===(!b.safari||
+safari.pushNotification).toString()||b.localStorage&&/Safari/.test(b.navigator.userAgent)){try{b.openDatabase(null,null,null,null)}catch(h){c();a=!0;break a}try{localStorage.length||(localStorage.x=1,localStorage.removeItem("x")),d()}catch(h){navigator.cookieEnabled?c():d()}a=!0}else a=void 0;a||(b.indexedDB||!b.PointerEvent&&!b.MSPointerEvent?a=void 0:(c(),a=!0));a||d()}(function(){e(!0)},function(){e(!1)})})(window);</script><script type="text/javascript" id="">(function(){window.nyt_et&&nyt_et("soon",{subject:"page_update",jsonKidd:google_tag_manager["rm"]["2703797"](146),canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,assetId:(document.querySelector("meta[name\x3darticleid]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),sourceApp:google_tag_manager["rm"]["2703797"](152),gtm:google_tag_manager["rm"]["2703797"](153),presentation:google_tag_manager["rm"]["2703797"](154),
+web_app:{releaseVersion:google_tag_manager["rm"]["2703797"](155)}})})();</script><script type="text/javascript" id="" src="https://cdn.brandmetrics.com/tag/85a1ebf79602421aa1c2c2f24d32cb6c/nyt.js"></script><script type="text/javascript" async="true" src="https://cdn.brandmetrics.com/scripts/bundle/65568.js?sid=4486dfe2-780e-4dfa-a60a-2a948887658f&amp;toploc=www.nytimes.com"></script><iframe src="https://0a75b383aff32c849c46f05a5313d0e9.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"></iframe></body></html>

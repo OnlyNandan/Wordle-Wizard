@@ -1,0 +1,22 @@
+examples/wordle_test.py::WordleTests::test_wordle
+--------------------------------------------------------------------
+Last Page: https://www.nytimes.com/games/wordle/index.html
+ Duration: 10.92s
+  Browser: Chrome 124.0.6367.91 / headless
+   Driver: chromedriver 124.0.6367.201
+Timestamp: 1715502679  (Unix Timestamp)
+     Date: Sunday, 12 May 2024
+     Time: 12:31:19 PM  (+04, UTC+04:00)
+--------------------------------------------------------------------
+Traceback:
+  File "/home/nandan/Downloads/wordle-solver-master/examples/wordle_test.py", line 77, in test_wordle
+    self.click(button)
+  File "/home/nandan/.local/lib/python3.12/site-packages/seleniumbase/fixtures/base_case.py", line 411, in click
+    element = page_actions.wait_for_element_visible(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nandan/.local/lib/python3.12/site-packages/seleniumbase/fixtures/page_actions.py", line 494, in wait_for_element_visible
+    timeout_exception(NoSuchElementException, message)
+  File "/home/nandan/.local/lib/python3.12/site-packages/seleniumbase/fixtures/page_actions.py", line 252, in timeout_exception
+    raise exc(msg)
+Exception: Message: 
+ Element {button[data-key="e"]} was not present after 7 seconds!
